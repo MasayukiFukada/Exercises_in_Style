@@ -2,7 +2,7 @@
 type: programming-style
 title: "【スタイル番号. スタイル名 (例: 01. Good Old Times)】"
 description: "このスタイルの主要な制約や特徴を1〜2文で簡潔に記述してください。"
-resource: "file:///home/minamo/repository/exercises_in_style/"
+resource: "../../【スタイルディレクトリ】/main.ts"
 tags:
   - "exercises-in-style"
   - "programming-style"
