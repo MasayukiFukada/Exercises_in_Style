@@ -40,7 +40,7 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **04. Monolith (モノリス)**
     *   **制約:** 名前付きの関数や抽象化を排し、1つの巨大なシーケンシャル処理として実装。
     *   **実行コマンド:** `mise exec -- npx ts-node 04-monolith/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-04-monolith.md](./style-04-monolith.md)
 *   **05. Cookbook (クックブック)**
     *   **制約:** 状態をできるだけ共有せず、小さな手続き（サブルーチン）に分割する一般的な手続き型。
     *   **実行コマンド:** `mise exec -- npx ts-node 05-cookbook/main.ts`
