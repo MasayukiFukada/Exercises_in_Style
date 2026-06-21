@@ -52,7 +52,7 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **07. Code Golf (コードゴルフ)**
     *   **制約:** 可能な限りコードを短く（文字数を少なく）書く。
     *   **実行コマンド:** `mise exec -- npx ts-node 07-code-golf/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-07-code-golf.md](./style-07-code-golf.md)
 
 ## Part III: Function Composition (関数合成)
 関数同士をどのように合成して複雑なフローを構築するか。
