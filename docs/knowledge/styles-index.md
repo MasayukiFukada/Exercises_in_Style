@@ -44,7 +44,7 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **05. Cookbook (クックブック)**
     *   **制約:** 状態をできるだけ共有せず、小さな手続き（サブルーチン）に分割する一般的な手続き型。
     *   **実行コマンド:** `mise exec -- npx ts-node 05-cookbook/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-05-cookbook.md](./style-05-cookbook.md)
 *   **06. Pipeline (パイプライン)**
     *   **制約:** 各処理を純粋関数として繋ぎ、関数の出力を次の関数の入力として流す（中間状態の保持を避ける）。
     *   **実行コマンド:** `mise exec -- npx ts-node 06-pipeline/main.ts`
