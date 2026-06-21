@@ -28,7 +28,7 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **02. Go Forth (前へ進め)**
     *   **制約:** スタック指向（Forthスタイル）。
     *   **実行コマンド:** `mise exec -- npx ts-node 02-go-forth/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-02-go-forth.md](./style-02-go-forth.md)
 
 ## Part II: Basic Styles (基本スタイル)
 手続き型・関数型の基礎となる構造化や構成方法。
