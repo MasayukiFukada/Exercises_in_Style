@@ -48,7 +48,7 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **06. Pipeline (パイプライン)**
     *   **制約:** 各処理を純粋関数として繋ぎ、関数の出力を次の関数の入力として流す（中間状態の保持を避ける）。
     *   **実行コマンド:** `mise exec -- npx ts-node 06-pipeline/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-06-pipeline.md](./style-06-pipeline.md)
 *   **07. Code Golf (コードゴルフ)**
     *   **制約:** 可能な限りコードを短く（文字数を少なく）書く。
     *   **実行コマンド:** `mise exec -- npx ts-node 07-code-golf/main.ts`
