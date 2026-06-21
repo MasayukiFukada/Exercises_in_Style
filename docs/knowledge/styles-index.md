@@ -60,15 +60,15 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **08. Infinite Mirror (無限の鏡)**
     *   **制約:** ループ構造（for, whileなど）の禁止。すべての繰り返しを再帰で表現。
     *   **実行コマンド:** `mise exec -- npx ts-node 08-infinite-mirror/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-08-infinite-mirror.md](./style-08-infinite-mirror.md)
 *   **09. Kick Forward (キックフォワード)**
     *   **制約:** 処理の最後に次の処理を明示的に呼び出す（継続渡しスタイル / CPS）。
     *   **実行コマンド:** `mise exec -- npx ts-node 09-kick-forward/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-09-kick-forward.md](./style-09-kick-forward.md)
 *   **10. The One (ザ・ワン)**
     *   **制約:** 処理の流れや値のラップを行う、特定のモナド的な抽象化（Bind関数による鎖状の連結）。
     *   **実行コマンド:** `mise exec -- npx ts-node 10-the-one/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-10-the-one.md](./style-10-the-one.md)
 
 ## Part IV: Objects and Object Interaction (オブジェクトと相互作用)
 オブジェクト指向やメッセージングによるカプセル化と連携。
