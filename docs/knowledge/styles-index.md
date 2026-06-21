@@ -36,7 +36,7 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **03. Arrays (配列)**
     *   **制約:** 配列操作を中心とし、データ全体を一括処理するアプローチ。
     *   **実行コマンド:** `mise exec -- npx ts-node 03-arrays/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-03-arrays.md](./style-03-arrays.md)
 *   **04. Monolith (モノリス)**
     *   **制約:** 名前付きの関数や抽象化を排し、1つの巨大なシーケンシャル処理として実装。
     *   **実行コマンド:** `mise exec -- npx ts-node 04-monolith/main.ts`
