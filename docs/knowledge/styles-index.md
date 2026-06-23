@@ -104,19 +104,19 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **17. Introspective (イントロスペクティブ)**
     *   **制約:** 実行時に自身のクラス名や属性情報（メタデータ）を検査して処理を行う。
     *   **実行コマンド:** `mise exec -- npx ts-node 17-introspective/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-17-introspective.md](./style-17-introspective.md)
 *   **18. Reflective (リフレクティブ)**
     *   **制約:** 実行時にコードや関数定義を動的に追加・生成して実行する。
     *   **実行コマンド:** `mise exec -- npx ts-node 18-reflective/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-18-reflective.md](./style-18-reflective.md)
 *   **19. Aspects (アスペクト)**
     *   **制約:** アスペクト指向（AOP）。横断的関心事（ロギングなど）をメインロジックに動的に織り込む。
     *   **実行コマンド:** `mise exec -- npx ts-node 19-aspects/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-19-aspects.md](./style-19-aspects.md)
 *   **20. Plugins (プラグイン)**
     *   **制約:** 動的ローディング。外部の設定ファイル等に基づいて動的にモジュールを差し替える。
     *   **実行コマンド:** `mise exec -- npx ts-node 20-plugins/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-20-plugins.md](./style-20-plugins.md)
 
 ## Part VI: Adversity (逆境)
 エラーハンドリング、防御、または静的解析などの制約。
