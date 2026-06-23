@@ -26,3 +26,21 @@
 4. **リンクの相対パス原則:**
    - ドキュメント内のあらゆるファイルリンク（実装コードや他ドキュメントへの参照など）は、絶対パス（`file:///...`）ではなく、必ずドキュメントからの**相対パス**で記述してください。
 
+---
+
+## プロジェクトの進捗状況と引き継ぎ事項 (次回アクション用)
+
+### 1. 開発環境
+*   **言語:** TypeScript (Node.js 20系)
+*   **ランタイム管理:** `mise` (バージョン固定は `.mise.toml`)
+*   **動作検証コマンド:** `mise exec -- npx ts-node <各スタイルディレクトリ>/main.ts`
+*   **検証用シナリオ仕様:** `docs/knowledge/project-setup.md` に記載（ECショッピングカートの共通実行ストーリー）。
+
+### 2. 現在の進捗 (実装完了済み)
+*   **Part I: Historical** (01. Good Old Times, 02. Go Forth)
+*   **Part II: Basic Styles** (03. Arrays, 04. Monolith, 05. Cookbook, 06. Pipeline, 07. Code Golf)
+*   **Part III: Function Composition** (08. Infinite Mirror, 09. Kick Forward, 10. The One)
+    *   *※すべての完了スタイルについて、実装 (`main.ts`)、OKFドキュメント化、インデックスへの登録が完了しています。*
+
+### 3. 次回のアクション
+*   **Part IV: Objects and Object Interaction** の最初のスタイル **`11-things`** の設計と実装から再開してください。

@@ -76,27 +76,27 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **11. Things (シングズ / モノ)**
     *   **制約:** データを保持する「オブジェクト」とその相互作用（一般的なオブジェクト指向）。
     *   **実行コマンド:** `mise exec -- npx ts-node 11-things/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-11-things.md](./style-11-things.md)
 *   **12. Letterbox (レターボックス)**
     *   **制約:** 直接のメソッド呼び出しを排し、メッセージ送信によってオブジェクト間通信を行う（Smalltalkスタイル）。
     *   **実行コマンド:** `mise exec -- npx ts-node 12-letterbox/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-12-letterbox.md](./style-12-letterbox.md)
 *   **13. Closed Maps (クローズドマップ)**
     *   **制約:** クラスを定義せず、マップ（辞書）に値と関数を動的バインドしてオブジェクトを作成（プロトタイプベース）。
     *   **実行コマンド:** `mise exec -- npx ts-node 13-closed-maps/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-13-closed-maps.md](./style-13-closed-maps.md)
 *   **14. Abstract Things (抽象的なモノ)**
     *   **制約:** 抽象データ型（ADT）として、実装とインターフェースを厳密に分離する。
     *   **実行コマンド:** `mise exec -- npx ts-node 14-abstract-things/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-14-abstract-things.md](./style-14-abstract-things.md)
 *   **15. Hollywood (ハリウッド)**
     *   **制約:** 「こちらから電話するな、必要ならこちらからかける」（IoC / 制御の反転）。
     *   **実行コマンド:** `mise exec -- npx ts-node 15-hollywood/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-15-hollywood.md](./style-15-hollywood.md)
 *   **16. Bulletin Board (掲示板)**
     *   **制約:** パブリッシュ・サブスクライブ（出版-購読）パターンによるイベント駆動。
     *   **実行コマンド:** `mise exec -- npx ts-node 16-bulletin-board/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-16-bulletin-board.md](./style-16-bulletin-board.md)
 
 ## Part V: Reflection and Metaprogramming (リフレクションとメタプログラミング)
 プログラムが自分自身の構造やコード自体を操作する手法。
