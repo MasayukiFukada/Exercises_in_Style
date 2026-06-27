@@ -135,6 +135,54 @@ flowchart TD
 
 ---
 
+## レシピ5：イベント駆動型CQRSアーキテクチャ (Event-Driven CQRS Architecture)
+
+### 組み合わせるスタイル
+*   **43. Event Sourcing** (不変イベントログの蓄積による状態の永続化)
+*   **46. Reactive Streams** (非同期イベントのストリーム処理と `scan` による自動状態集約)
+*   **06. Pipeline** (出力ビューの関数合成による成形)
+
+### 相乗効果の仕組み
+現代の分散システムで広く使われる CQRS (Command Query Responsibility Segregation) パターンを極めて美しく具現化するレシピです。
+
+1.  **書き込みモデル (Command):** ユーザーやシステムからのアクション（コマンド）を、`Reactive Streams` の `action$` ストリームにパブリッシュします。
+2.  **不変イベントログと投影 (Event Sourcing):** ストリーム上を流れるアクションの履歴を `scan` オペレータを用いて「不変のイベント配列」として蓄積・リプレイし、読み取り専用の最新状態（Projection / 投影）をリアルタイムに自動構築します。これにより、状態の破壊的更新を防ぎます。
+3.  **読み取りモデル (Query):** 投影された最新状態に対して、`Pipeline`（純粋関数合成）を適用し、割引計算やレシート文字列の整形など、プレゼンテーションに応じた様々なビューを切り出して購読者（Subscriber）にプッシュします。
+
+```mermaid
+flowchart TD
+    classDef default fill:#1c1c1e,stroke:#3a3a3c,color:#f5f5f7;
+    classDef command fill:#ff453a,stroke:#b01d16,color:#ffffff;
+    classDef state fill:#0a84ff,stroke:#0066cc,color:#ffffff;
+    classDef query fill:#30d158,stroke:#248a3d,color:#ffffff;
+    
+    A["アクション要求 (Command)"] -->|action$.next| B["Action Stream (Reactive Streams)"]:::command
+    B -->|scan / replay| C["不変イベントログ / Projection (Event Sourcing)"]:::state
+    C -->|状態検知| D["最新の読取ビュー (Query)"]:::query
+    D -->|Pipelineによる成形| E["レシート出力 / サブスクライバ"]:::query
+```
+
+*   **実務でのユースケース:** 高スケーラビリティが要求されるリアルタイム協調編集システム、証跡監査が必要なバンキングAPI、分散型マイクロサービスにおける集計モデル。
+
+---
+
+## レシピ6：極限の宣言的システム (Zero-Imperative System)
+
+### 組み合わせるスタイル
+*   **45. Logic Programming** (事実と規則による宣言的なビジネスルールの定義)
+*   **42. Point-free** (変数・仮引数を排除した関数合成による制御フロー)
+
+### 相乗効果の仕組み
+手続き的制御（`if-else` やループ、変数の再代入）をシステムから完全に排除し、ビジネスルールと処理フローの両方を「宣言的」に統一するアプローチです。
+
+1.  **ルールの定義:** カート追加の妥当性や在庫チェック、割引ルールを「Prolog風の事実（Facts）と規則（Rules）」の形（`Logic Programming`）でアサートします。
+2.  **実行の合成:** その判定結果を、引数名や変数名を持たない `Point-free` の関数合成（`pipe`, `ifElse`）に流し込みます。
+3.  **相乗効果:** 通常のルールエンジンは評価結果を受け取った後で命令的なコード（`if (check.success) { ... }`）を書きますが、本レシピではその判定からアクションの実行までを一切の変数代入なしで流れるように連結します。人間が介在する「命令（ハウ）」を完全に排除し、「何であるか（ワット）」のみでシステム全体が自律的に動作します。
+
+*   **実務でのユースケース:** 動的に変化する複雑なプロモーション・割引ルールの評価と決済フローの連結、アクセス制御（認可）ポリシーエンジン。
+
+---
+
 ## まとめ：アーキテクトとは「文体の調合師」である
 
 プログラミングスタイルの制約は、一見不便に見えますが、組み合わせることによって**「カオスなコードに美しい秩序と防壁をもたらすレール」**へと変貌します。
@@ -143,5 +191,7 @@ flowchart TD
 *   **システムの拡張性を追求するなら:** `Abstract Things` × `Plugins` × `Hollywood`
 *   **並行処理の堅牢性を追求するなら:** `Actors` × `Quarantine`
 *   **リアクティブな変化を追求するなら:** `Bulletin Board` × `Spreadsheet`
+*   **イベント駆動・高監査性を追求するなら:** `Event Sourcing` × `Reactive Streams` × `Pipeline`
+*   **命令性を徹底排除するなら:** `Logic Programming` × `Point-free`
 
-ドメインや直面している問題に応じて、これらの文体を適切にブレンドし、最適なアーキテクチャを「調合」することが、本プロジェクトが目指す極限の設計探求のゴールです。
+ドメインや直面している問題に応じて、これらの文体を適切にブレンドし、最適なアーキテクチャを「調合」することが、本プロジェクトが目指す極限の設計探求 of ゴールです。

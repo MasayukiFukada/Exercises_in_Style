@@ -1,17 +1,18 @@
 ---
 type: concept
 title: "Programming Styles Index"
-description: "「Exercises in Programming Style」で取り扱われている全41のプログラミングスタイルの一覧と、プロジェクト内の実装・解説へのインデックスです。"
+description: "「Exercises in Programming Style」で取り扱われている全46のプログラミングスタイルの一覧と、プロジェクト内の実装・解説へのインデックスです。"
 resource: "https://github.com/crista/exercises-in-programming-style"
 tags:
   - "exercises-in-style"
   - "programming-style"
   - "index"
-timestamp: "2026-06-21T22:39:00+09:00"
+timestamp: "2026-06-27T22:22:00+09:00"
 ---
 
 ## プログラミングスタイルの総合評価・メタ分析
-全41個のプログラミングスタイルを多角的に分析し、実務やAI駆動開発に役立てるためのドキュメント群です。
+全46個のプログラミングスタイルを多角的に分析し、実務やAI駆動開発に役立てるためのドキュメント群です。
+*   **[プログラミングスタイル実装・設計リファレンスガイド](./style-implementation-guide.md)**: 各スタイルを実装・設計する際の本質的制約とコードの急所（ハマりどころ）をまとめたガイド。
 *   **[プログラミングスタイル総合評価・ランキング](./style-ranking.md)**: 4つの軸（拡張性、テスタビリティ、AI親和性、可読性）での総合評価とベスト/ワーストスタイル。
 *   **[プログラミングスタイルの相乗効果（相性の良い組み合わせレシピ）](./style-combinations.md)**: 複数のスタイルを組み合わせ、弱点を補い合う設計パターン（レシピ）。
 *   **[プログラミングスタイルの光と影（逆説的考察）](./style-paradox.md)**: 一見不便なスタイルの極限での価値や、AI時代におけるプログラミングの文体の逆説的価値。
@@ -19,7 +20,7 @@ timestamp: "2026-06-21T22:39:00+09:00"
 
 # プログラミングスタイル一覧 (Programming Styles Index)
 
-書籍『プログラミングの文体練習（Exercises in Programming Style）』および参考リポジトリに登場する全41種類のプログラミングスタイルの一覧です。
+書籍『プログラミングの文体練習（Exercises in Programming Style）』および参考リポジトリに登場する全46種類のプログラミングスタイル（独自追加の5スタイルを含む）の一覧です。
 
 本プロジェクトにおいて、各スタイルを実装し自分なりに消化したドキュメントへのリンクを順次追加していきます。
 
