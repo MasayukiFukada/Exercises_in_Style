@@ -1,6 +1,6 @@
 # Exercises in Programming Style (TypeScript / Shopping Cart)
 
-このプロジェクトは、Cristina Videira Lopes 著の名著 **『プログラミングの文体練習 (Exercises in Programming Style)』** に登場する全41種類のプログラミングスタイルを、現代的なプログラミング言語である **TypeScript (Node.js)** を用いて再実装し、それぞれの設計思想や制約を深く学ぶことを目的としたプロジェクトです。
+このプロジェクトは、Cristina Videira Lopes 著の名著 **『プログラミングの文体練習 (Exercises in Programming Style)』** に登場する全46種類のプログラミングスタイル（独自追加の5スタイルを含む）を、現代的なプログラミング言語である **TypeScript (Node.js)** を用いて再実装し、それぞれの設計思想や制約を深く学ぶことを目的としたプロジェクトです。
 
 本家リポジトリでは「単語の出現頻度カウント (Term Frequency)」を題材にしていますが、本プロジェクトではビジネスロジックや状態遷移の比較がしやすい **「ECショッピングカート」** を共通の題材として採用しています。
 
@@ -44,7 +44,7 @@ mise exec -- npx ts-node 06-pipeline/main.ts
 
 ## 📚 プログラミングスタイル一覧とドキュメント
 
-実装された全41種類のスタイルの一覧、実行コマンド、および各スタイルを自分なりに消化・考察したドキュメントへのリンクは、インデックスにまとめられています。
+実装された全46種類のスタイルの一覧、実行コマンド、および各スタイルを自分なりに消化・考察したドキュメントへのリンクは、インデックスにまとめられています。
 
 *   **[プログラミングスタイル一覧 (インデックス)](docs/knowledge/styles-index.md)**
     *   **Part I: Historical** (歴史的スタイル: `01. Good Old Times`, `02. Go Forth`)
@@ -57,14 +57,17 @@ mise exec -- npx ts-node 06-pipeline/main.ts
     *   **Part VIII: Concurrency** (並行性: `29`〜`32`)
     *   **Part IX: Interactivity** (インタラクティブ性: `33`〜`34`)
     *   **Part X: Machine Learning / Neural Networks** (ニューラルネットワーク: `35`〜`41`)
+    *   **Part XI: Extensions** (追加・拡張スタイル: `42. Point-free`〜`46. Reactive Streams`)
 
 ---
 
-## 🏆 プログラミングスタイルの総合評価・ランキング
+## 🏆 メタ分析・評価・実装リファレンス
 
-全41個のスタイルを「拡張性」「テスタビリティ」「生成AI親和性」「可読性」の4つの評価軸で評価・ランキング化し、実務における適用可能性やAI時代におけるスタイル選択についてまとめた総括ドキュメントです。
+全46個のスタイルを多角的に分析・評価し、実務での活用や設計・実装時に役立てるためのドキュメント群です。
 
-*   **[プログラミングスタイル総合評価・ランキング](docs/knowledge/style-ranking.md)**
+*   **[プログラミングスタイル実装・設計リファレンスガイド](docs/knowledge/style-implementation-guide.md)**: 各スタイルを設計・実装する際の本質的制約とコードの急所（ハマりどころ）をコンパクトにまとめたガイド。
+*   **[プログラミングスタイル総合評価・ランキング](docs/knowledge/style-ranking.md)**: 拡張性、テスタビリティ、AI親和性、可読性の4つの軸で評価し、実務やAI駆動開発に役立つベスト/ワーストを決定。
+*   **[プログラミングスタイルの相乗効果（組み合わせレシピ）](docs/knowledge/style-combinations.md)**: `Event-Driven CQRS` や `Zero-Imperative` など、複数のスタイルを組み合わせ弱点を補い合う設計パターン。
 
 ---
 
