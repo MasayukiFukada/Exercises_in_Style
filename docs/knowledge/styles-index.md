@@ -191,87 +191,24 @@ timestamp: "2026-06-21T22:39:00+09:00"
 *   **41. Convolutions (畳み込み)**
     *   **制約:** フィルタを用いた畳み込み処理。
     *   **実行コマンド:** `mise exec -- npx ts-node 41-convolutions/main.ts`
-    *   **解説:** [style-41-convolutions.md](./style-41-convolutions.md))**
-    *   **制約:** 計算ロジック（純粋関数）と、I/Oなどの副作用（純粋でない処理）を厳密に隔離する（HaskellのIOモナド的アプローチ）。
-    *   **実行コマンド:** `mise exec -- npx ts-node 25-quarantine/main.ts`
-    *   **解説:** [未作成]
+    *   **解説:** [style-41-convolutions.md](./style-41-convolutions.md)
 
-## Part VII: Data-Centric (データ中心)
-データの構造や流れそのものにプログラムのフローを委ねる手法。
+## Part XI: Extensions (追加・拡張スタイル)
+本プロジェクトで独自に追加した、書籍の演習問題や現代的な設計パラダイムに基づくスタイル。
 
-*   **26. Persistence (永続化)**
-    *   **制約:** 計算のすべての途中状態をデータベース（SQL等）に保存し、クエリを用いて処理を進める。
-    *   **実行コマンド:** `mise exec -- npx ts-node 26-persistence/main.ts`
-    *   **解説:** [未作成]
-*   **27. Spreadsheet (スプレッドシート)**
-    *   **制約:** 値の更新が、依存している他の値に自動で再計算・反映される（リアクティブプログラミング）。
-    *   **実行コマンド:** `mise exec -- npx ts-node 27-spreadsheet/main.ts`
-    *   **解説:** [未作成]
-*   **28. Lazy Rivers (ゆったり流れる川 / 遅延評価)**
-    *   **制約:** ジェネレータや遅延評価を用い、必要なタイミングで必要な分だけデータをストリーム処理する。
-    *   **実行コマンド:** `mise exec -- npx ts-node 28-lazy-rivers/main.ts`
-    *   **解説:** [未作成]
-
-## Part VIII: Concurrency (並行性)
-スレッドやプロセスによる並列・分散処理。
-
-*   **29. Actors (アクター)**
-    *   **制約:** アクターモデル。状態を共有せず、互いに非同期メッセージを送信し合うアクター群で処理を分割。
-    *   **実行コマンド:** `mise exec -- npx ts-node 29-actors/main.ts`
-    *   **解説:** [未作成]
-*   **30. Dataspaces (データスペース)**
-    *   **制約:** 共有のタプルスペース（Lindaスタイル）に変数を出し入れし、並行ワーカー同士で調整を行う。
-    *   **実行コマンド:** `mise exec -- npx ts-node 30-dataspaces/main.ts`
-    *   **解説:** [未作成]
-*   **31. MapReduce (マップリデュース)**
-    *   **制約:** データをマップ（分割・加工）とリデュース（集計）の2段階に分解して処理。
-    *   **実行コマンド:** `mise exec -- npx ts-node 31-map-reduce/main.ts`
-    *   **解説:** [未作成]
-*   **32. Hadoop (ハドゥープ / ダブルMapReduce)**
-    *   **制約:** 複数のMapReduceステージをパイプライン状に連結して処理。
-    *   **実行コマンド:** `mise exec -- npx ts-node 32-hadoop/main.ts`
-    *   **解説:** [未作成]
-
-## Part IX: Interactivity (インタラクティブ性)
-ユーザーや外部環境との対話的なやり取り。
-
-*   **33. Trinity (三位一体 / MVC)**
-    *   **制約:** Model-View-Controller (MVC) パターン。
-    *   **実行コマンド:** `mise exec -- npx ts-node 33-trinity/main.ts`
-    *   **解説:** [未作成]
-*   **34. RESTful (ステートレス)**
-    *   **制約:** ステートレスなリクエスト／レスポンスサイクル（WebのRESTスタイル）。
-    *   **実行コマンド:** `mise exec -- npx ts-node 34-restful/main.ts`
-    *   **解説:** [未作成]
-
-## Part X: Machine Learning / Neural Networks (ニューラルネットワーク)
-第2版で追加された、ディープラーニングなどの機械学習アプローチによるTerm Frequency。
-
-*   **35. Shallow Dense (浅い密なネットワーク)**
-    *   **制約:** 単層パーセプトロンを用いたネットワークによる判定。
-    *   **実行コマンド:** `mise exec -- npx ts-node 35-shallow-dense/main.ts`
-    *   **解説:** [未作成]
-*   **36. Training Shallow Dense (学習)**
-    *   **制約:** 単層パーセプトロンの重みの動的学習（バックプロパゲーション等）。
-    *   **実行コマンド:** `mise exec -- npx ts-node 36-training-shallow-dense/main.ts`
-    *   **解説:** [未作成]
-*   **37. Bowtie (ボウタイ)**
-    *   **制約:** 多層ニューラルネットワーク（オートエンコーダ等の構成）。
-    *   **実行コマンド:** `mise exec -- npx ts-node 37-bowtie/main.ts`
-    *   **解説:** [未作成]
-*   **38. NeuroMonolith (ニューロモノリス)**
-    *   **制約:** シーケンスデータを扱うためのニューラルネットワーク。
-    *   **実行コマンド:** `mise exec -- npx ts-node 38-neuromonolith/main.ts`
-    *   **解説:** [未作成]
-*   **39. Sliding Window (スライディングウィンドウ / CNN)**
-    *   **制約:** 畳み込みニューラルネットワーク（CNN）アプローチ。
-    *   **実行コマンド:** `mise exec -- npx ts-node 39-sliding-window/main.ts`
-    *   **解説:** [未作成]
-*   **40. Recurrent (リカレント / RNN)**
-    *   **制約:** リカレントニューラルネットワーク（RNN）によるシークエンス制御。
-    *   **実行コマンド:** `mise exec -- npx ts-node 40-recurrent/main.ts`
-    *   **解説:** [未作成]
-*   **41. Convolutions (畳み込み)**
-    *   **制約:** フィルタを用いた畳み込み処理。
-    *   **実行コマンド:** `mise exec -- npx ts-node 41-convolutions/main.ts`
-    *   **解説:** [未作成]
+*   **42. Point-free (ポイントフリー)**
+    *   **制約:** 変数宣言や引数の命名を一切禁止し、カリー化された関数と関数合成（pipe）のみで構築する。
+    *   **実行コマンド:** `mise exec -- npx ts-node 42-point-free/main.ts`
+    *   **解説:** [style-42-point-free.md](./style-42-point-free.md)
+*   **43. Event Sourcing (イベントソーシング)**
+    *   **制約:** 状態の直接更新を禁止し、履歴イベントの蓄積とリプレイによる状態再現のみで処理する。
+    *   **実行コマンド:** `mise exec -- npx ts-node 43-event-sourcing/main.ts`
+    *   **解説:** [style-43-event-sourcing.md](./style-43-event-sourcing.md)
+*   **44. Tail-Recursive (末尾再帰・トランポリン)**
+    *   **制約:** ループ構文や配列反復メソッドを排し、トランポリンエンジンを用いたスタックセーフな末尾再帰で反復を処理する。
+    *   **実行コマンド:** `mise exec -- npx ts-node 44-tail-recursive/main.ts`
+    *   **解説:** [style-44-tail-recursive.md](./style-44-tail-recursive.md)
+*   **45. Logic Programming (論理・制約プログラミング)**
+    *   **制約:** 手続き的制御を排除し、事実（Facts）と規則（Rules）を登録した知識ベースへのクエリ実行で問題を解決する。
+    *   **実行コマンド:** `mise exec -- npx ts-node 45-logic-programming/main.ts`
+    *   **解説:** [style-45-logic-programming.md](./style-45-logic-programming.md)
