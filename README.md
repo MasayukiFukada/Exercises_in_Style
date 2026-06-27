@@ -68,6 +68,7 @@ mise exec -- npx ts-node 06-pipeline/main.ts
 *   **[プログラミングスタイル実装・設計リファレンスガイド](docs/knowledge/style-implementation-guide.md)**: 各スタイルを設計・実装する際の本質的制約とコードの急所（ハマりどころ）をコンパクトにまとめたガイド。
 *   **[プログラミングスタイル総合評価・ランキング](docs/knowledge/style-ranking.md)**: 拡張性、テスタビリティ、AI親和性、可読性の4つの軸で評価し、実務やAI駆動開発に役立つベスト/ワーストを決定。
 *   **[プログラミングスタイルの相乗効果（組み合わせレシピ）](docs/knowledge/style-combinations.md)**: `Event-Driven CQRS` や `Zero-Imperative` など、複数のスタイルを組み合わせ弱点を補い合う設計パターン。
+*   **[クラスとオブジェクト指向のパラダイムシフト](docs/knowledge/class-paradigm-shift.md)**: 近代開発におけるクラスの必然性を問い直し、関数型、イベント駆動、AI駆動開発の台頭に伴うオブジェクト指向からのシフトについて考察したドキュメント。
 
 ---
 
