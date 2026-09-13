@@ -1,7 +1,7 @@
 ---
 type: concept
 title: "Programming Styles Index"
-description: "「Exercises in Programming Style」で取り扱われている全46のプログラミングスタイルの一覧と、プロジェクト内の実装・解説へのインデックスです。"
+description: "「Exercises in Programming Style」で取り扱われている全48のプログラミングスタイル（本家41 ＋ 独自追加7）の一覧と、プロジェクト内の実装・解説へのインデックスです。"
 resource: "https://github.com/crista/exercises-in-programming-style"
 tags:
   - "exercises-in-style"
@@ -11,9 +11,10 @@ timestamp: "2026-06-27T22:22:00+09:00"
 ---
 
 ## プログラミングスタイルの総合評価・メタ分析
-全46個のプログラミングスタイルを多角的に分析し、実務やAI駆動開発に役立てるためのドキュメント群です。
+全48個（本家41 ＋ 独自追加7）のプログラミングスタイルを多角的に分析し、実務やAI駆動開発に役立てるためのドキュメント群です。
+*   **[2026年秋版：自律エージェント・推論モデル時代におけるプログラミングスタイル再評価](./style-ranking-2026-agentic-era.md)**: AIの進化（長文脈・推論モデル・プロンプトキャッシュ・自律エージェント）を踏まえた最新のスタイル再評価。
+*   **[プログラミングスタイル総合評価・ランキング (2026年6月初版)](./style-ranking.md)**: 4つの軸（拡張性、テスタビリティ、AI親和性、可読性）での総合評価とベスト/ワーストスタイル。
 *   **[プログラミングスタイル実装・設計リファレンスガイド](./style-implementation-guide.md)**: 各スタイルを実装・設計する際の本質的制約とコードの急所（ハマりどころ）をまとめたガイド。
-*   **[プログラミングスタイル総合評価・ランキング](./style-ranking.md)**: 4つの軸（拡張性、テスタビリティ、AI親和性、可読性）での総合評価とベスト/ワーストスタイル。
 *   **[プログラミングスタイルの相乗効果（相性の良い組み合わせレシピ）](./style-combinations.md)**: 複数のスタイルを組み合わせ、弱点を補い合う設計パターン（レシピ）。
 *   **[プログラミングスタイルの光と影（逆説的考察）](./style-paradox.md)**: 一見不便なスタイルの極限での価値や、AI時代におけるプログラミングの文体の逆説的価値。
 *   **[クラスとオブジェクト指向のパラダイムシフト](./class-paradigm-shift.md)**: クラスの必然性を問い直し、関数型、イベント駆動、AI駆動開発の台頭に伴うパラダイムシフトについて考察。
@@ -21,7 +22,7 @@ timestamp: "2026-06-27T22:22:00+09:00"
 
 # プログラミングスタイル一覧 (Programming Styles Index)
 
-書籍『プログラミングの文体練習（Exercises in Programming Style）』および参考リポジトリに登場する全46種類のプログラミングスタイル（独自追加の5スタイルを含む）の一覧です。
+書籍『プログラミングの文体練習（Exercises in Programming Style）』の公式スタイルと、本プロジェクト独自の追加スタイルを合わせた**全48種類（本家41スタイル ＋ 独自追加7スタイル）**の一覧です。
 
 本プロジェクトにおいて、各スタイルを実装し自分なりに消化したドキュメントへのリンクを順次追加していきます。
 
@@ -195,8 +196,8 @@ timestamp: "2026-06-27T22:22:00+09:00"
     *   **実行コマンド:** `mise exec -- npx ts-node 41-convolutions/main.ts`
     *   **解説:** [style-41-convolutions.md](./style-41-convolutions.md)
 
-## Part XI: Extensions (追加・拡張スタイル)
-本プロジェクトで独自に追加した、書籍の演習問題や現代的な設計パラダイムに基づくスタイル。
+## Part XI: Extensions (追加・拡張スタイル: 全7種)
+本プロジェクトで独自に追加した、書籍の演習課題や現代的な設計パラダイム・AIエージェント時代に基づくスタイル（42〜48）。
 
 *   **42. Point-free (ポイントフリー)**
     *   **制約:** 変数宣言や引数の命名を一切禁止し、カリー化された関数と関数合成（pipe）のみで構築する。
@@ -214,3 +215,16 @@ timestamp: "2026-06-27T22:22:00+09:00"
     *   **制約:** 手続き的制御を排除し、事実（Facts）と規則（Rules）を登録した知識ベースへのクエリ実行で問題を解決する。
     *   **実行コマンド:** `mise exec -- npx ts-node 45-logic-programming/main.ts`
     *   **解説:** [style-45-logic-programming.md](./style-45-logic-programming.md)
+*   **46. Reactive Streams (リアクティブストリーム)**
+    *   **制約:** すべての入力を不変のイベントストリームとして表現し、オペレータの合成と購読（subscribe）のみで状態遷移と副作用を実行する。
+    *   **実行コマンド:** `mise exec -- npx ts-node 46-reactive-streams/main.ts`
+    *   **解説:** [style-46-reactive-streams.md](./style-46-reactive-streams.md)
+*   **47. Functional Core, Imperative Shell (FCIS / 純粋コア・命令的シェル)**
+    *   **制約:** すべてのビジネスロジックを副作用ゼロ・不変の純粋関数（Core）に集約し、I/Oと状態管理を外側の薄いシェル（Shell）に厳密隔離する。
+    *   **実行コマンド:** `mise exec -- npx ts-node 47-functional-core-imperative-shell/main.ts`
+    *   **解説:** [style-47-functional-core-imperative-shell.md](./style-47-functional-core-imperative-shell.md)
+*   **48. Agentic Tool Use (ReAct / ツール呼び出し)**
+    *   **制約:** 各機能をスキーマ付きToolとして公開し、自律エージェントがReAct推論ループ（Thought -> Action -> Observation）でゴールを達成する（2026年スナップショット）。
+    *   **実行コマンド:** `mise exec -- npx ts-node 48-agentic-tool-use/main.ts`
+    *   **解説:** [style-48-agentic-tool-use.md](./style-48-agentic-tool-use.md)
+

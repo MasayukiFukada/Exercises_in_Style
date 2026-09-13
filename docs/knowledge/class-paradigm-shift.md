@@ -40,9 +40,9 @@ timestamp: "2026-06-27T22:35:00+09:00"
 ---
 
 ## 3. 「クラスレス」な文体への回帰（本プロジェクトでのアプローチ）
-本プロジェクトで実装した独自拡張を含む全46のスタイルでは、クラスという手段を用いずに「状態遷移」や「ポリモーフィズム」をクリーンに表現する手法をいくつも実践しました。
+本プロジェクトで実装した独自拡張を含む全48のスタイルでは、クラスという手段を用いずに「状態遷移」や「ポリモーフィズム」をクリーンに表現する手法をいくつも実践しました。
 
-*   **データと振る舞いの完全分離 ([06. Pipeline](file:///home/minamo/repository/exercises_in_style/docs/knowledge/style-06-pipeline.md) / [42. Point-free](file:///home/minamo/repository/exercises_in_style/docs/knowledge/style-42-point-free.md)):**
+*   **データと振る舞いの完全分離 ([06. Pipeline](file:///home/minamo/repository/exercises_in_style/docs/knowledge/style-06-pipeline.md) / [42. Point-free](file:///home/minamo/repository/exercises_in_style/docs/knowledge/style-42-point-free.md) / [47. Functional Core, Imperative Shell](file:///home/minamo/repository/exercises_in_style/docs/knowledge/style-47-functional-core-imperative-shell.md)):**
     データを「不変（Immutable）な単なるレコード」とし、ロジックを「純粋関数（Pure Functions）」とします。状態を隠すのではなく、「古い状態を受け取り、新しい状態を返す」関数の連鎖として表現することで、副作用や並行処理の競合を根本から排除します。
 *   **クロージャによる隠蔽 ([13. Closed Maps](file:///home/minamo/repository/exercises_in_style/docs/knowledge/style-13-closed-maps.md)):**
     クラス定義を排除し、関数のレキシカルスコープ（クロージャ）を用いてアドホックに状態を閉じ込めます。これにより、重厚なクラス構文を持たない軽量な言語でも、安全な隠蔽を実現します。
